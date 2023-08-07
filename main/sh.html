@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Shopping Website</title>
+<style>
+
+body {background-color: aqua;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+}
+
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 20px;
+}
+
+
+.product {
+    width: 300px;
+    margin: 20px;
+    padding: 20px;
+    background-color: #f8f8f8;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0px 0px 10px 0px #ccc;
+}
+
+.product img {
+    width: 200px;
+    height: 200px;
+    margin-bottom: 10px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.product h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.product p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.product button {
+    background-color: #ad6c0b;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.product button:hover {
+    background-color: #040ca4;
+}
+
+aside {
+    width: 300px;
+    margin: 20px;
+    padding: 20px;
+    background-color: #28c0ce;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 0px #0baba8;
+}
+
+aside h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+#cart {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 10px;
+}
+
+#cart li {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+#total {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+</style>
+</head>
+<body>
+	<header>
+		<h1>Shopping Website</h1>
+	</header>
+	<main>
+		<section>
+			<div class="product">
+				<img src="product1.jpg" alt="Product 1">
+				<h2>Product 1</h2>
+				<p>Description of Product 1</p>
+				<p>Price: ₹200</p>
+				<button class="add-to-cart" onclick="addToCart('Product 1', 200)">Add to Cart</button>
+			</div>
+			<div class="product">
+				<img src="product2.jpg" alt="Product 2">
+				<h2>Product 2</h2>
+				<p>Description of Product 2</p>
+				<p>Price: ₹300</p>
+				<button class="add-to-cart" onclick="addToCart('Product 2', 300)">Add to Cart</button>
+			</div>
+			<div class="product">
+				<img src="product3.jpg" alt="Product 3">
+				<h2>Product 3</h2>
+				<p>Description of Product 3</p>
+				<p>Price: ₹400</p>
+				<button class="add-to-cart" onclick="addToCart('Product 3', 400)">Add to Cart</button>
+			</div>
+			<div class="product">
+				<img src="product4.jpg" alt="Product 4">
+				<h2>Product 4</h2>
+				<p>Description of Product 4</p>
+				<p>Price: ₹500</p>
+				<button class="add-to-cart" onclick="addToCart('Product 4', 500)">Add to Cart</button>
+			</div>
+			<div class="product">
+				<img src="product5.jpg" alt="Product 5">
+				<h2>Product 5</h2>
+				<p>Description of Product 5</p>
+				<p>Price: ₹600</p>
+				<button class="add-to-cart" onclick="addToCart('Product 5', 600)">Add to Cart</button>
+			</div>
+			<div class="product">
+				<img src="product6.jpg" alt="Product 6">
+				<h2>Product 6</h2>
+				<p>Description of Product 6</p>
+				<p>Price: ₹700</p>
+				<button class="add-to-cart" onclick="addToCart('Product 6', 700)">Add to Cart</button>
+			</div>
+			<div class="product">
+				<img src="product7.jpg" alt="Product 7">
+				<h2>Product 7</h2>
+				<p>Description of Product 7</p>
+				<p>Price: ₹800</p>
+				<button class="add-to-cart" onclick="addToCart('Product 7', 800)">Add to Cart</button>
+			</div>
+			<div class="product">
+				<img src="product8.jpg" alt="Product 8">
+				<h2>Product 8</h2>
+				<p>Description of Product 8</p>
+				<p>Price: ₹900</p>
+				<button class="add-to-cart" onclick="addToCart('Product 8, 900)">Add to Cart</button>
+			</div>
+            <div class="product">
+				<img src="product9.jpg" alt="Product 9">
+				<h2>Product 9</h2>
+				<p>Description of Product 9</p>
+				<p>Price: ₹1700</p>
+				<button class="add-to-cart" onclick="addToCart('Product 9', 1700)">Add to Cart</button>
+			</div>
+			<div class="product">
+				<img src="product10.jpg" alt="Product 10">
+				<h2>Product 10</h2>
+				<p>Description of Product 10</p>
+				<p>Price: ₹1800</p>
+				<button class="add-to-cart" onclick="addToCart('Product 10', 1800)">Add to Cart</button>
+			</div>
+			<div class="product">
+				<img src="product11.jpg" alt="Product 11">
+				<h2>Product 11</h2>
+				<p>Description of Product 11</p>
+				<p>Price: ₹1900</p>
+				<button class="add-to-cart" onclick="addToCart('Product 11', 1900)">Add to Cart</button>
+			</div>
+			<div class="product">
+				<img src="product12.jpg" alt="Product 12">
+				<h2>Product 12</h2>
+				<p>Description of Product 12</p>
+				<p>Price: ₹2000</p>
+				<button class="add-to-cart" onclick="addToCart('Product 12', 2000)">Add to Cart</button>
+			</div>
+			<div class="product">
+				<img src="product13.jpg" alt="Product 13">
+				<h2>Product 13</h2>
+				<p>Description of Product 13</p>
+				<p>Price: ₹2100</p>
+				<button class="add-to-cart" onclick="addToCart('Product 13', 2100)">Add to Cart</button>
+			</div>
+			<div class="product">
+				<img src="product14.jpg" alt="Product 14">
+				<h2>Product 14</h2>
+				<p>Description of Product 14</p>
+				<p>Price: ₹2200</p>
+				<button class="add-to-cart" onclick="addToCart('Product 14', 2200)">Add to Cart</button>
+			</div>
+			<div class="product">
+				<img src="product15.jpg" alt="Product 15">
+				<h2>Product 15</h2>
+				<p>Description of Product 15</p>
+				<p>Price: ₹2300</p>
+				<button class="add-to-cart" onclick="addToCart('Product 15', 2300)">Add to Cart</button>
+			</div>
+			<div class="product">
+				<img src="product16.jpg" alt="Product 16">
+				<h2>Product 16</h2>
+				<p>Description of Product 16</p>
+				<p>Price: ₹2400</p>
+				<button class="add-to-cart" onclick="addToCart('Product 16', 2400)">Add to Cart</button>
+			</div>
+		</section>
+		<aside>
+			<h2>Cart</h2>
+			<ul id="cart"></ul>
+			<p id="total"></p>
+		</aside>
+	</main>
+	<script>
+       
+        let cart = [];
+    
+        
+        function addToCart(name, price) {
+            
+            let item = {
+                name: name,
+                price: price
+            };
+            
+            
+            cart.push(item);
+            
+            
+            updateCart();
+        }
+    
+        
+        function updateCart() {
+            
+            let cartElement = document.getElementById("cart");
+            let totalElement = document.getElementById("total");
+    
+            
+            let cartDisplay = "";
+            let totalPrice = 0;
+    
+            
+            for (let i = 0; i < cart.length; i++) {
+                let item = cart[i];
+                cartDisplay += "<li>" + item.name + " - ₹" + item.price + "</li>";
+                totalPrice += item.price;
+            }
+    
+            
+            cartElement.innerHTML = cartDisplay;
+            totalElement.innerHTML = "Total: ₹" + totalPrice.toFixed(2);
+        }
+    </script>
+    
+
+
+
